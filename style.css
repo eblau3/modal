@@ -1,0 +1,50 @@
+.modal {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.modal__overlay {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__content {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: min(980px, 90%);
+  padding: 16px;
+  background-color: white;
+}
+
+.modal__close {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, -125%);
+  display: block;
+}
+
+.modal.is-active {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
