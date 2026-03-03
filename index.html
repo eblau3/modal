@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Modal Demo</title>
   <style>
     * {
       box-sizing: border-box;
@@ -15,18 +15,34 @@
       width: 100%;
     }
   </style>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./modal.css">
+  <script src="./modal.js" defer></script>
 </head>
 <body>
-  <button class="js-modal-open">Open Modal</button>
-  <div class="modal js-modal">
-    <div class="modal__overlay js-modal-overlay"></div>
-    
+  <button type="button" class="js-modal-open" data-target="modal-01" aria-haspopup="dialog" aria-expanded="false" aria-label="モーダル01を開く">モーダル01を表示</button>
+
+  <button type="button" class="js-modal-open" data-target="modal-02" aria-haspopup="dialog" aria-expanded="false" aria-label="モーダル02を開く">モーダル02を表示</button>
+
+  <div id="modal-01" class="modal js-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="モーダル01">
+    <div class="modal__overlay js-modal-close"></div>
     <div class="modal__content">
-      <button class="modal__close js-modal-close">Close Modal</button>
-      <img src="https://placehold.jp/980x640.png">
+      <button type="button" class="modal__close js-modal-close" aria-label="閉じる">閉じる</button>
+      <div class="modal__inner">
+        <img src="https://placehold.jp/900x600.png" alt="">
+        <p>モーダル01</p>
+      </div>
     </div>
   </div>
-  <script src="main.js"></script>
+
+  <div id="modal-02" class="modal js-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="モーダル02">
+    <div class="modal__overlay js-modal-close"></div>
+    <div class="modal__content">
+      <button type="button" class="modal__close js-modal-close" aria-label="閉じる">閉じる</button>
+      <div class="modal__inner">
+        <img src="https://placehold.jp/900x600.png" alt="">
+        <p>モーダル02</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

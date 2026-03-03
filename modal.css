@@ -5,6 +5,7 @@
   left: 0;
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
   display: block;
   width: 100vw;
   height: 100vh;
@@ -46,5 +47,6 @@
 .modal.is-active {
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
   transition: all 0.3s ease;
 }
