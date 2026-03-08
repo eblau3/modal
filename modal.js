@@ -106,4 +106,4 @@ const initializeModal = () => {
   });
 };
 
-document.addEventListener("DOMContentLoaded", initializeModal);
+window.addEventListener("DOMContentLoaded", initializeModal);
